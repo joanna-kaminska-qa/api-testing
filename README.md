@@ -97,7 +97,7 @@ http://localhost:8080/ws/courses.wsdl
 ./gradlew bootJar
 ./gradlew clean
 ```
-## Dependencies (Gradle)
+**Dependencies (Gradle)**
 ```
 plugins {
     id 'java'
@@ -129,7 +129,7 @@ tasks.named('test') {
 
 ---
 
-## Test Suites Overview
+### Test Suites Overview
 **SoapUI Functional Tests**
 - Verifying SOAP request/response correctness
 - Schema (XSD) validation
@@ -223,7 +223,7 @@ kodilla-rest-api-postman-json/
 gradlew clean build
 ```
 
-## Dependencies (Gradle)
+**Dependencies (Gradle)**
 ```
 plugins {
     id 'java'
@@ -249,9 +249,9 @@ test {
 ```
 ---
 
-## Test Suites Overview
+### Test Suites Overview
 
-### Controller Unit Tests
+**Controller Unit Tests**
 - **Purpose:** Verify controller behavior without starting the full server.
 - **Checks performed:**
   - Correct JSON responses
@@ -262,7 +262,7 @@ test {
   - `BookControllerMvcTest`
   - `BookControllerTest`
 
-### REST Integration Tests (RestAssured)
+**REST Integration Tests (RestAssured)**
 - **Purpose:** Test endpoints with real HTTP requests.
 - **Checks performed:**
   - Response validation (JSON structure, content)
@@ -271,7 +271,7 @@ test {
 - **File:**
   - `BookControllerRestAssuredTest`
 
-### External API Tests
+**External API Tests**
 - **Purpose:** Verify handling of external APIs using RestAssured.
 - **Checks performed:**
   - GET requests to public APIs
@@ -326,4 +326,5 @@ See the LICENSE file for details.
 - JSONPlaceholder API
 - Postman Learning Center
 - MailHog project
+
 
