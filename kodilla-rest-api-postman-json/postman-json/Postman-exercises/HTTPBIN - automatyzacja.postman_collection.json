@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "32719815-7f91-46cc-a7be-23bbc955a344",
+		"name": "HTTPBIN - automatyzacja",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46770370",
+		"_collection_link": "https://joannakaminska-992277.postman.co/workspace/Joanna-Kaminska's-Workspace~e45eaeb3-8053-4b41-8b95-4e25f75c15e5/collection/46770370-32719815-7f91-46cc-a7be-23bbc955a344?action=share&source=collection_link&creator=46770370"
+	},
+	"item": [
+		{
+			"name": "User ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status is 200\", ()=>{\r",
+							"pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"pm.test(\"should verify response - uuid\", ()=>{\r",
+							"    const resData = pm.response.json();\r",
+							"    console.log (resData.uuid);\r",
+							"    pm.expect(resData.uuid.length).to.be.greaterThan(8888888);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://httpbin.org/uuid",
+					"protocol": "https",
+					"host": [
+						"httpbin",
+						"org"
+					],
+					"path": [
+						"uuid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TEST",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const przywitaang = () => {\r",
+							"    console.log(\"Hello\");\r",
+							"};\r",
+							"\r",
+							"przywitaang();"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"packages": {},
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Czy mail ma @",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Mail have @\", ()=>{ \r",
+							"    const body = pm.response.json();\r",
+							"    const adresEmail = body.email;\r",
+							"    console.log(\"E-mail to:\", adresEmail);\r",
+							"    pm.expect(adresEmail.includes(\"@\")).to.be.true;\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/users/1",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

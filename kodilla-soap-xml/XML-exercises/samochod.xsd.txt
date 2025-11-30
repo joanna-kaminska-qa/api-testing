@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  
+           targetNamespace="http://www.kodilla.com" 
+           xmlns="http://www.kodilla.com" 
+           elementFormDefault="qualified"> 
+    
+    <xs:element name="samochod">  
+        <xs:complexType> 
+            
+            <xs:attribute name="model" type="xs:string"/>
+            <xs:attribute name="marka" type="xs:string"/>
+            
+            <xs:sequence>  
+                
+                <xs:element name="wnetrze">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="materialSiedzen" type="xs:string"/> 
+                            <xs:element name="kolorSiedzen" type="xs:string"/> 
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <xs:element name="zewnetrze">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="iloscDrzwi" type="xs:integer"/> 
+                            <xs:element name="kolor" type="xs:string"/> 
+                            <xs:element name="silnik">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="rodzaj" type="xs:string"/>
+                                        <xs:element name="pojemnosc" type="xs:decimal"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>  
+          
+            </xs:sequence>
+
+        </xs:complexType>
+    </xs:element>  
+</xs:schema>

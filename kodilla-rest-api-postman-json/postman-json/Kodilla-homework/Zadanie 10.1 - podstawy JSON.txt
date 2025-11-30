@@ -1,0 +1,23 @@
+{
+"carname": "Fiat",
+"carmodel": "Panda",
+"enginecapacity": 1.2,
+"seats": [
+{
+"material": "cotton",
+"color": "black"
+},
+{
+"material": "cotton",
+"color": "black"
+},
+{
+"material": "cotton",
+"color": "black"
+},
+{
+"material": "cotton",
+"color": "black"
+}
+]
+}

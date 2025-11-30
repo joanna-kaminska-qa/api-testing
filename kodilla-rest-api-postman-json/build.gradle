@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.5'
+    id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'com.kodilla'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    sourceCompatibility = '21'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'  // Starter Spring Boot dla aplikacji webowej
+    testImplementation 'io.rest-assured:rest-assured:5.4.0'
+    testImplementation 'io.rest-assured:spring-mock-mvc:5.4.0'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'  // JUnit Platform
+    testImplementation 'com.google.code.gson:gson:2.8.9'  // Gson do konwersji obiektów Java na JSON
+    testImplementation 'io.rest-assured:json-path:5.4.0'
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'io.rest-assured'
+        exclude group: 'io.rest-assured', module: 'rest-assured-common'
+        exclude group: 'io.rest-assured', module: 'spring-mock-mvc'
+    }
+    testImplementation 'io.rest-assured:xml-path:5.4.0'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

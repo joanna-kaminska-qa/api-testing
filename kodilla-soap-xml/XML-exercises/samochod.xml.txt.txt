@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<car:samochod xmlns:car="http://www.kodilla.com" 
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://www.kodilla.com samochod.xsd.txt"
+              model="Fiat" marka="Panda">
+
+    <car:wnetrze>
+        <car:materialSiedzen>bawelna</car:materialSiedzen>
+        <car:kolorSiedzen>czarny</car:kolorSiedzen>
+    </car:wnetrze>
+
+    <car:zewnętrze>
+        <car:iloscDrzwi>5</car:iloscDrzwi>
+        <car:kolor>Srebrny</car:kolor>
+        <car:silnik>
+            <car:rodzaj>benzyna</car:rodzaj>
+            <car:pojemnosc>1.2</car:pojemnosc>
+        </car:silnik>
+    </car:zewnętrze>
+
+</car:samochod>

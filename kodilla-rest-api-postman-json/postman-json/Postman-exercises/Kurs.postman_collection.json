@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "6ab93918-eff5-467b-a125-59c1266ef300",
+		"name": "Kurs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46770370",
+		"_collection_link": "https://joannakaminska-992277.postman.co/workspace/Joanna-Kaminska's-Workspace~e45eaeb3-8053-4b41-8b95-4e25f75c15e5/collection/46770370-6ab93918-eff5-467b-a125-59c1266ef300?action=share&source=collection_link&creator=46770370"
+	},
+	"item": [
+		{
+			"name": "Dodawanie użytkownika",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5f6736e9128494b734ac93bb3815cc9aab89bb8eb3bc4a032cd29be42541417c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Deb Dwivedi\",\r\n        \"email\": \"wwfkw22_dvdndvn@hayes-nolan.test\",\r\n        \"gender\": \"female\",\r\n        \"status\": \"active\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gorest.co.in/public/v2/users",
+					"protocol": "https",
+					"host": [
+						"gorest",
+						"co",
+						"in"
+					],
+					"path": [
+						"public",
+						"v2",
+						"users"
+					],
+					"query": [
+						{
+							"key": "Access Token",
+							"value": "5f6736e9128494b734ac93bb3815cc9aab89bb8eb3bc4a032cd29be42541417c",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dodawanie posta użytkownikowi",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5f6736e9128494b734ac93bb3815cc9aab89bb8eb3bc4a032cd29be42541417c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"user_id\": 8201781,\r\n        \"title\": \"Pierwszy wpis nowego użytkownika o id 8201754\",\r\n        \"body\": \"Przykładowa treść pierwszego wpisu użytkownika\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gorest.co.in/public/v2/posts",
+					"protocol": "https",
+					"host": [
+						"gorest",
+						"co",
+						"in"
+					],
+					"path": [
+						"public",
+						"v2",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuwanie książki",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"title\": \"Harry Potter i Kamień Filozoficzny\",\r\n \"author\": \"J.K. Rowling\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dodawanie książek do własnego REST API",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"title\": \"Władca Pierścieni\",\r\n        \"author\": \"J.R.R. Tolkien\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
